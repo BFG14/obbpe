@@ -23,8 +23,9 @@ for (i = 0; i < profiles.length; i++) { //Start of Cycle
     axios(config)
         .then(function (response) {
             console.log(response.data);
+            document.getElementById("output").innerHTML = response.data;
         })
         .catch(function (error) {
-            console.log(error);
+            document.getElementById("output").innerHTML = error;
         });
 };
