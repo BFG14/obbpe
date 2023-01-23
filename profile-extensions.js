@@ -4,8 +4,8 @@ console.log(profiles);
 const input2 = prompt('Введите uuid расширений через запятую, без пробелов:');
 const extensions = input2.split(',');
 console.log(extensions);
-const token = prompt('Enter token:')
-const delay = prompt('Задержка(мс):')
+const token = prompt('Enter token:');
+const delay = prompt('Задержка(мс):');
 
 const profileURL = 'https://app.octobrowser.net/api/v2/automation/profiles/';
 const data = {
