@@ -5,7 +5,6 @@ const input2 = prompt('Введите uuid расширений через за�
 const extensions = input2.split(',');
 console.log(extensions);
 const token = prompt('Enter token:');
-const ms = prompt('Задержка(мс):');
 
 const profileURL = 'https://app.octobrowser.net/api/v2/automation/profiles/';
 const data = {
@@ -29,6 +28,6 @@ for (i = 0; i < profiles.length; i++) { //Start of Cycle
         .catch(function (error) {
             document.getElementById("output").innerHTML = error;
         });
-        const sleep = ms => new Promise(r => setTimeout(r, ms));
+        
 
 };
