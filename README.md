@@ -1,4 +1,4 @@
-# obbpe
+# Octobrowser batch profile extensions updater
 Visit here https://bfg14.github.io/obbpe
 
 To Do:
