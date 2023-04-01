@@ -20,7 +20,7 @@ for (i = 0; i < profiles.length; i++) { //Start of Cycle
         },
         data: data
     };
-    setTimeout(() => { axios(config) }, 200)
+    setTimeout(() => { axios(config) 
         .then(function (response) {
             console.log(response.data);
             document.getElementById("output").innerHTML = document.getElementById("output").innerHTML + response.data;
@@ -28,6 +28,6 @@ for (i = 0; i < profiles.length; i++) { //Start of Cycle
         .catch(function (error) {
             document.getElementById("output").innerHTML = document.getElementById("output").innerHTML +error;
         });
-        
+    }, 200);    
 
 };
