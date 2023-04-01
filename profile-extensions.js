@@ -7,6 +7,15 @@ console.log(extensions);
 const token = prompt('Enter token:');
 
 const profileURL = 'https://app.octobrowser.net/api/v2/automation/profiles/';
+
+function sleep(milliseconds) {
+    const date = Date.now();
+    let currentDate = null;
+    do {
+      currentDate = Date.now();
+    } while (currentDate - date < milliseconds);
+  }
+
 const data = {
     extensions: extensions //Put UUIDs of Extensions here
 };
@@ -20,7 +29,8 @@ for (i = 0; i < profiles.length; i++) { //Start of Cycle
         },
         data: data
     };
-    setTimeout(() => { axios(config) 
+    sleep(2000);
+    axios(config) 
         .then(function (response) {
             console.log(response.data);
             document.getElementById("output").innerHTML = document.getElementById("output").innerHTML + response.data + "\r\n";
@@ -28,6 +38,5 @@ for (i = 0; i < profiles.length; i++) { //Start of Cycle
         .catch(function (error) {
             document.getElementById("output").innerHTML = document.getElementById("output").innerHTML + error + "\r\n";
         });
-    }, 2000);    
 
 };
