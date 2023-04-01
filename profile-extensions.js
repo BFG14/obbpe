@@ -28,6 +28,6 @@ for (i = 0; i < profiles.length; i++) { //Start of Cycle
         .catch(function (error) {
             document.getElementById("output").innerHTML = document.getElementById("output").innerHTML +error;
         });
-    }, 200);    
+    }, 2000);    
 
 };
