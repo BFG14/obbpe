@@ -23,10 +23,10 @@ for (i = 0; i < profiles.length; i++) { //Start of Cycle
     setTimeout(() => { axios(config) 
         .then(function (response) {
             console.log(response.data);
-            document.getElementById("output").innerHTML = document.getElementById("output").innerHTML + response.data;
+            document.getElementById("output").innerHTML = document.getElementById("output").innerHTML + response.data + "\r\n";
         })
         .catch(function (error) {
-            document.getElementById("output").innerHTML = document.getElementById("output").innerHTML +error;
+            document.getElementById("output").innerHTML = document.getElementById("output").innerHTML + error + "\r\n";
         });
     }, 2000);    
 
